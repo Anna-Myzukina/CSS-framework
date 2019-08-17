@@ -1,0 +1,45 @@
+
+$breakpoints: (
+    mobileS: 320px,
+    mobileM: 375px,
+    mobileL: 425px,
+    tablet: 768px,
+    laptop: 1024px,
+    large: 1200px
+);
+
+$items: 12;
+
+@mixin break($size){
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+@each $key, $value in $breakpoints{
+    @include break($key){
+        @for $i from 1 through $items {
+            .column-#{$key}-#{$i} {
+                width: #{$i / $items * 100%};
+                float: left;
+            }
+        }
+
+    }
+}
+
+@mixin clearfix(){
+    &:after{
+        content: ".";
+        display: block;
+        clear: both;
+    }
+    &:before{
+        content: ".";
+        display: block;
+        clear: both;
+    }
+}
+.row{
+    @include clearfix;
+}
