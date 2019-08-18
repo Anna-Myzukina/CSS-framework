@@ -1,20 +1,27 @@
-@import "abstacts/_mixin";
-@import "abstracts/_variables";
-@import "base/_reset";
-@import "components/_buttons";
-@import "components/_dropdown";
-@import "components/_slider";
-@import "components/_footer";
-@import "component/_form";
-@import "layout/_grid";
-@import "layout/_media";
-@import "layout/_menu";
-@import "layout/_nav";
-@import "pages/_home";
-@import "pages/_contacts";
-@import "services/_colors";
-@import "services/_sizes";
-@import "services/_text";
+@import "abstracts/mixin" ;
+@import "abstracts/variables" ;
+
+@import "base/reset" ;
+
+@import "components/buttons" ;
+@import "components/dropdown" ;
+@import "components/slider" ;
+
+
+@import "layout/forms" ;
+@import "layout/footer" ;
+@import "layout/grid" ;
+@import "layout/media" ;
+@import "layout/menu" ;
+@import "layout/nav" ;
+
+@import "pages/home" ;
+@import "pages/contacts" ;
+
+@import "services/animations" ;
+@import "services/colors" ;
+@import "services/sizes" ;
+@import "services/_text" ;
 
 
 
