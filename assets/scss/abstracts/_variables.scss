@@ -3,19 +3,38 @@
 ///2.the value is likely to be updated at least once;значение скорее всего будет обновлено хотя бы один раз;
 ///3.all occurrences of the value are tied to the variable (i.e. not by coincidence).все вхождения значения привязаны к переменной
 
-//
+//sizes
 $width: 100%;
 $height: 100%;
 
+$space: 10px;
+///  {String} key - Имя слоя
+/// {Number} value - значение Z, соответствущее ключу
+$breakpoints: (
+    'small': 425px,
+    'medium': 768px,
+    'large': 1024px,
+    'huge': 1200px
+);
+
+$cols: 12;
 
 // colors
 $black: #000;
 $white: #fff;
 $gray-dark: #333;
+$gray-bg-menu: #1f1f1f;
 $gray-classic: #666;
 $gray-light: #999;
 $blue: steelblue;
-$red: #d9252b;
+$red: orange;
+
+$yellow: #fc0;
 
 // component values
 $border-radius: 3px;
+
+//flex directions
+
+$absolute: absolute;
+$relative: relative;

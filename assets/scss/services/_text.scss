@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700");
+
 body {
     color: $black;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 h3, h4, h5, h6 {
@@ -10,6 +12,7 @@ h3, h4, h5, h6 {
 p {
     margin-bottom: 5px;
     line-height: 24px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
@@ -38,10 +41,20 @@ h6, p {
     font-size: 18px;
 }
 
+.uppercase-t {
+    text-transform: uppercase;
+  }
+  
+  .capitalize-t {
+    text-transform: capitalize;
+  }
+
 a:link,
 a:visited {
+    font-size: $space * 1.8;
     text-decoration: none;
     font: inherit;
     color: inherit;
     cursor: pointer;
+    display: inline-flex;
 }

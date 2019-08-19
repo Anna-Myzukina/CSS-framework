@@ -3,8 +3,51 @@
 /// param {Length} $width
 /// param {Length} $height
 
+*{
+    box-sizing: border-box;
+}
+
+html,
+body{
+    width: $width;
+    height: $height;
+
+}
+.container-fluid {
+    width: 95%;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.container{
+    width: $width;
+    margin-left: 0;
+    margin-right: 0;
+}
+.row {
+    position: relative;
+    width: $width;
+  }
+
+  @mixin grid($cols, $margin) {
+      //затем создаю селектор по типу div и подключаю там этот миксин через include 
+      //и подаю два параметра: кол-во колонок и отступы в процентах
+    float: left;
+    background: $gray-classic;
+    margin-right: $margin;
+    margin-bottom: $margin;
+    height: ($width * 10%);
+    width: ((100% - (($cols - 1) * $margin)) / $cols);
+
+    //добавим один псевдокласс затем нотчайлд, т.е. не элемент и будем выбирать в последнем ряду #{$cols}n)
+    &:nth-child(#{$cols}n){
+        //и устанавливать каждому последнему колу марджин справа ноль
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
+
 @mixin size($width, $height: $width) {
     width: $width;
     height: $height;
   }
-  
