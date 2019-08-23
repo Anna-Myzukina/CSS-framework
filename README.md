@@ -2,10 +2,10 @@
 PROJECT: DESIGN YOUR OWN GRID-BASED FRAMEWORK
 - [Preview](https://anna-myzukina.github.io/CSS-framework/)
 
-//This formula create next properties for margin/padding : 
-$sides:(top, bottom, left, right);
-$sizes:(sm, md, lg);
-$values:1rem;
+## This formula create next properties for margin/padding : 
+* $sides:(top, bottom, left, right);
+* $sizes:(sm, md, lg);
+* $values:1rem;
 
 @each $side in $sides {
   @each $value in $values {
