@@ -65,53 +65,53 @@ PROJECT: DESIGN YOUR OWN GRID-BASED FRAMEWORK
 
 
 
-// keys with properties of sizes of screen this arrey we use in next part to create madia
-$breakpoints: ('small': 425px,
-    'medium': 768px,
-    'large': 1024px,
-    'huge': 1200px);
+##  keys with properties of sizes of screen this arrey we use in next part to create madia
+      $breakpoints: ('small': 425px,
+          'medium': 768px,
+          'large': 1024px,
+          'huge': 1200px);
 
 /// this variable means number of column in your project, if you need you can
 ///  change to any number and use next formula to create grid system:
-$cols: 12;
+        $cols: 12;
 
-@mixin break($size) {
-    @media (min-width: map-get($breakpoints, $size)) {  //syntaxis : map-get($map, $key)function 
-        //the function returns the value in the map associated with the given key
-        @content;
-    }
-}
-
-@each $key,$value in $breakpoints { //the each rule evaluates a block of styles for each key/value pair in map
-    @include break($key) {
-        @for $i from 1 through $cols {
-            .col-#{$key}-#{$i} {
-                width: #{$i / $cols * 100%};
-                float: left;
+        @mixin break($size) {
+            @media (min-width: map-get($breakpoints, $size)) {  //syntaxis : map-get($map, $key)function 
+                //the function returns the value in the map associated with the given key
+                @content;
             }
         }
 
-    }
-}
+        @each $key,$value in $breakpoints { //the each rule evaluates a block of styles for each key/value pair in map
+            @include break($key) {
+                @for $i from 1 through $cols {
+                    .col-#{$key}-#{$i} {
+                        width: #{$i / $cols * 100%};
+                        float: left;
+                    }
+                }
 
-/// author Nicolas Gallanger
-/// link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
+            }
+        }
 
-@mixin clearfix() {
-    &:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
+        /// author Nicolas Gallanger
+        /// link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
 
-    &:before {
-        content: "";
-        display: block;
-        clear: both;
-    }
+        @mixin clearfix() {
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+            }
 
-}
+            &:before {
+                content: "";
+                display: block;
+                clear: both;
+            }
 
-.row {
-    @include clearfix;
-}
+        }
+
+        .row {
+            @include clearfix;
+        }
