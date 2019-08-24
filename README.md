@@ -126,4 +126,6 @@ PROJECT: DESIGN YOUR OWN GRID-BASED FRAMEWORK
         x-special/nautilus-clipboard
 
 
-![github-small]https://github.com/Anna-Myzukina/CSS-framework/blob/master/assets/img/Screenshot%20from%202019-08-23%2014-13-48.png
+![github-small](assets/img/Screenshot%20from%202019-08-23%2014-13-48.png)
+
+
