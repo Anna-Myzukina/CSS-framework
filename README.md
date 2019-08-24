@@ -2,6 +2,9 @@
 PROJECT: DESIGN YOUR OWN GRID-BASED FRAMEWORK
 - [Preview](https://anna-myzukina.github.io/CSS-framework/)
 
+## Useful links:
+- [Simple grid mixins](http://thesassway.com/intermediate/simple-grid-mixins)
+- [Generate All Your Utility Classes with Sass Maps](https://frontstuff.io/generate-all-your-utility-classes-with-sass-maps)
 ## This formula create next properties for margin/padding : 
 * $sides:(top, bottom, left, right);
 * $sizes:(sm, md, lg);
