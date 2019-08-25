@@ -129,3 +129,24 @@ PROJECT: DESIGN YOUR OWN GRID-BASED FRAMEWORK
 ![github-small](assets/img/Screenshot%20from%202019-08-23%2014-13-48.png)
 
 
+
+      @mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+        position: $position;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+      }
+
+      .foo {
+        @include position(absolute, $top: 1em, $left: 50%);
+      }
+      
+output:
+
+      .foo {
+        position: absolute;
+        top: 1em;
+        left: 50%;
+      }
+
