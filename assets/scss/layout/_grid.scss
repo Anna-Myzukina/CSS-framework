@@ -8,7 +8,7 @@ $breakpoints: (
 );
 
 /// сздаем переменную обозначающую количество колонок на сайте, максимальное кол-во у нас 12
-$cols: 14;
+$cols: 12;
 
  /// далее создаем миксин брейк с параметром сайз, благодаря этому миксину будут формироваться медиазапросы 
 @mixin break($size){
@@ -27,11 +27,18 @@ $cols: 14;
         /// тут в качестве контента будет выводиться директива
         // для каждой переменной  $i начиная с еденицы до $items: 12; формируем селекторы с переменной $key и переменной $i 
         @for $i from 1 through $cols {
-            .column-#{$key}-#{$i} {
+            
+            .column-#{$key}-#{$i} { //here we create width for each column as parameters we pass key 
+                                    //it mean for example medium or large or huge and variable i 
+                                    //which mean number of column such way we create something like:
+                                    //.column-small-12
+                
                 //для каждого селектора назначаем ширину где $i делем на кол-во колонок и умножаем на 100%
+                //here we set width for each selector by class .column-....-...
                 width: #{$i / $cols * 100%};
                 //добавим обтикание слева для всх созданных селекторов
-                float: left;
+                
+                float: left; //here we add floating from left side
             }
         }
 
@@ -42,7 +49,7 @@ $cols: 14;
 /// author Николас Галлагер
 /// link http://nicolasgallagher.com/micro-clearfix-hack/ Micro Clearfix
 
-@mixin clearfix(){
+@mixin clearfix(){ //here we create mixin to clear floating
     &:after{
         content: "";
         display: block;
@@ -56,5 +63,5 @@ $cols: 14;
 }
 //показываем роу что-бы он использовал этот миксин
 .row{
-    @include clearfix;
+    @include clearfix;// here we show .row to use mixin for clearing row
 }

@@ -1,0 +1,81 @@
+.main-banner{
+    position: relative;
+    width: $width;
+    height: 650px;
+    background-image: url('https://www.bg-21.com/sites/default/files/styles/news/public/2019-03/M%C3%A9troLink%20-%20Photo%20de%20substitution.jpg?h=cd9e8a72&itok=LlS2nsz2');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.absolute-block{
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 25%;
+    height: 35%;
+    z-index: 1;
+    background: $gray-classic;
+    
+}
+.relative-box{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: $height;
+    width: $width;
+}
+.box{
+    background: $gold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: $height;
+    width: $width;
+    transform: translate(-50%, -50%);
+}
+.about-text{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+.figure{
+    width: 100%;
+    height: 100%;
+    transform: rotate(-5deg);
+}
+.figure::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -3px;
+    width: 50%;
+    height: 100%;
+    transform-origin: bottom;
+    transition: .5s;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_hy7aMUF2iqtYRo7hoI0UBVoMtahb30-JJOujWkhPddVmfWD3');
+}
+.box:hover{
+    .figure::before{
+        transform: rotateX(90deg) translateY(50%);
+    }
+}
+
+.figure::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 3px;
+    width: 50%;
+    height: 100%;
+    transform-origin: top;
+    transition: .5s;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_hy7aMUF2iqtYRo7hoI0UBVoMtahb30-JJOujWkhPddVmfWD3');
+    background-position: 270%;
+}
+.box:hover{
+    .figure::after{
+        transform: rotateX(90deg) translateY(-50%);
+    }
+}

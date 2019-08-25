@@ -1,4 +1,6 @@
 header{
-    background: $red;
     position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: $gray-bg-menu;
 }

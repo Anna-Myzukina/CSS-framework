@@ -3,6 +3,7 @@
 
 @import "base/reset" ;
 
+
 @import "components/buttons" ;
 @import "components/dropdown" ;
 @import "components/slider" ;
@@ -10,11 +11,13 @@
 
 @import "layout/forms" ;
 @import "layout/header" ;
+@import "layout/banner";
 @import "layout/footer" ;
 @import "layout/grid" ;
 @import "layout/media" ;
 @import "layout/menu" ;
 @import "layout/nav" ;
+@import "layout/slider";
 
 @import "pages/home" ;
 @import "pages/contacts" ;

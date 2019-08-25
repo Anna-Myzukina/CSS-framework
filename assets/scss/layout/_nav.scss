@@ -22,12 +22,12 @@ nav {
 
 .nav-item {
 	padding: $space * 1.5;
-	padding-right: $space;
+    padding-right: $space;
+    color: $gold;
 }
 
 .nav-link {
 	position: relative;
-	color: $white;
 	padding: 0;
     font-size: $space * 1.8;
     font-weight: bold;
@@ -62,8 +62,12 @@ nav {
 }
 
 .search {
-    color: $white;
+    color: $gold;
+}
+.search:hover{
+    color: $red;
 }
 .temp-link {
-	display: none;
+    display: none;
+    color: $red;
 }

@@ -1,0 +1,19 @@
+.gradient-to-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: linear-gradient(to bottom, transparent, $blacRgb, $black);
+}
+
+.gradient-to-bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: linear-gradient(to bottom,  $black 10%, $blacRgb,transparent,);
+}
